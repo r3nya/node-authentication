@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .jumbotron.text-center
+        h1
+            span.fa.fa-lock
+            |  Node Authentication
+        p Login or Register with:
+        a(href="/login" class="btn btn-default")
+            span.fa.fa-user
+            |  Local login
+        a(href="/signup" class="btn btn-default")
+            span.fa.fa-user
+            |  Local Signup
