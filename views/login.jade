@@ -8,7 +8,7 @@ block content
         // show any message
         -if (message.length > 0)
             .alert.alert-danger
-                -message
+                =message
 
         // Login form
         form(action="/login", method="post")
