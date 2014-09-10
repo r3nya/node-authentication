@@ -26,6 +26,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.disable('x-powered-by'); // disable Express's default X-Powered-By header
+
 app.set('view engine', 'jade');
 
 //require for passport
