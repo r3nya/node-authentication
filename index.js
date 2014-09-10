@@ -29,7 +29,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'jade');
 
 //require for passport
-app.use(session({ secret: 'ololokokoko'})); // session secret
+app.use(session({
+    secret: 'ololokokoko',
+    resave: true,
+    saveUninitialized: true
+})); // session setting
 app.use(passport.initialize());
 app.use(passport.session());  // persistent login sessions
 app.use(flash());   // use connect-flash for flash messages stored in session
